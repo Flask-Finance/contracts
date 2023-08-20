@@ -9,13 +9,13 @@
 - **withdrawTokens(address to, uint256 amount):** Allows the contract owner to withdraw excess tokens from the staking contract. Tokens are transferred to the specified recipient address.
 - In terms of the lock-up period, it is defined as a constant value `lockUpPeriod` of 30 days in the provided code. The **isLockUpPeriodFinished** function compares the difference between the current timestamp and the staking timestamp to determine if the lock-up period has passed for a specific user. This check is used in the unstake function to ensure users can only unstake their tokens after the lock-up period has ended.
 
-# TokenContract
+# TokenContract (Liquid Tokens)
 - **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
 - **transfer(address to, uint256 value):** Updates the balances correctly and call the `stakingContract.updateBalances` function if the stakingContract is set.
 - **approve(address spender, uint256 value):** Sets the allowance for the spender.
 - **transferFrom(address from, address to, uint256 value):**: Updates the balances correctly, deducts the allowance, and calls the `stakingContract.updateBalances` function if the stakingContract is set.
 
-# XTokContract
+# XTokContract (Synthetic Tokens)
 - **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
 - **Mint(address to, uint256 value):** Allows the contract to mint new tokens and increase the total supply. Tokens are minted and transferred to the specified recipient address.
 - **Burn(address from, uint256 value):** Allows the contract to burn tokens and decrease the total supply. Tokens are burned from the specified user's balance.
