@@ -11,9 +11,9 @@
 
 # TokenContract
 - **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
-- **transfer():** Updates the balances correctly and call the `stakingContract.updateBalances` function if the stakingContract is set.
-- **approve():** Sets the allowance for the spender.
-- **transferFrom():**: Updates the balances correctly, deducts the allowance, and calls the `stakingContract.updateBalances` function if the stakingContract is set.
+- **transfer(address to, uint256 value):** Updates the balances correctly and call the `stakingContract.updateBalances` function if the stakingContract is set.
+- **approve(address spender, uint256 value):** Sets the allowance for the spender.
+- **transferFrom(address from, address to, uint256 value):**: Updates the balances correctly, deducts the allowance, and calls the `stakingContract.updateBalances` function if the stakingContract is set.
 
 # XTokContract
 - **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
