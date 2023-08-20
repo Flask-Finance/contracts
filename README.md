@@ -32,3 +32,28 @@ The `XTokContract` is designed to serve as a companion contract for the staking 
 - The `StakingContract` interacts with the `XTokContract` during the staking and unstaking processes. When users stake tokens, the `StakingContract` mints an equivalent amount of tokens in the `XTokContract` using the `Mint` function. These tokens represent the user's staked amount and are used to track their staking - position. When users unstake, the `StakingContract` burns the corresponding tokens in the `XTokContract` using the `Burn` function.
 - This interaction allows for a seamless representation of staked tokens as synthetic tokens in the `XTokContract`, facilitating the liquid staking process and ensuring users' staking positions are accurately tracked.
 - The `XTokContract` functions as an integral component of the liquid staking ecosystem, enhancing the flexibility and utility of staked assets on the Ethereum blockchain.
+
+# Contract Deployment and Interaction Guide
+Follow these steps to deploy the contracts in the correct order and set up allowances for seamless interaction.
+
+## Step 1: Deploy `XTokContract` (Synthetic Tokens)
+1. Deploy the `XTokContract` smart contract to manage synthetic tokens.
+2. Note the address of the deployed `XTokContract` for later use.
+
+## Step 2: Deploy `TokenContract` (Liquid Tokens)
+1. Deploy the `TokenContract` smart contract for liquid token functionality.
+2. During deployment, provide the address of the previously deployed `XTokContract`.
+3. Note the address of the deployed `TokenContract`.
+
+## Step 3: Set Up Allowance for `StakingContract` 
+- Replace `stakingContractAddress` with the actual address of the deployed `StakingContract`.
+- Set an appropriate `maxAllowance` value.
+
+## Step 4: Deploy `StakingContract` 
+- Deploy the StakingContract to seamlessly interact with the TokenContract. 
+
+## Step 5: Interact with Contracts
+- Stake and unstake tokens using the `StakingContract`.
+
+**Note:**
+- Ensure you have the required Solidity compiler version and dependencies.
