@@ -1,5 +1,5 @@
 # StakingContract
-A contract that manages staking and unstaking of tokens, enabling users to participate in asset staking and earn rewards.
+Manages staking and unstaking of tokens, enabling users to participate in asset staking and earn rewards.
 
 - **constructor(address _tokenContractAddress):** Initializes the contract by setting the address of the TokenContract.
 - **stake(uint256 amount):** Allows users to stake a specified amount of tokens. The tokens are transferred from the user to the contract, and the user's balance and the total staked amount are updated. The staking timestamp is recorded.
@@ -12,7 +12,7 @@ A contract that manages staking and unstaking of tokens, enabling users to parti
 - In terms of the lock-up period, it is defined as a constant value `lockUpPeriod` of 30 days in the provided code. The **isLockUpPeriodFinished** function compares the difference between the current timestamp and the staking timestamp to determine if the lock-up period has passed for a specific user. This check is used in the unstake function to ensure users can only unstake their tokens after the lock-up period has ended.
 
 # TokenContract 
-A contract enabling the creation, management, and transfer of liquid tokens - representing tangible assets within a blockchain ecosystem.
+Enables the creation, management, and transfer of liquid tokens - representing tangible assets within a blockchain ecosystem.
 
 - **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
 - **transfer(address to, uint256 value):** Updates the balances correctly and call the `stakingContract.updateBalances` function if the stakingContract is set.
@@ -20,7 +20,7 @@ A contract enabling the creation, management, and transfer of liquid tokens - re
 - **transferFrom(address from, address to, uint256 value):**: Updates the balances correctly, deducts the allowance, and calls the `stakingContract.updateBalances` function if the stakingContract is set.
 
 # XTokContract 
-A contract designed to facilitate the generation and control of synthetic tokens - virtual representations of diverse liquid assets, enhancing liquidity and accessibility.
+Facilitates the generation and control of synthetic tokens - virtual representations of diverse liquid assets, enhancing liquidity and accessibility.
 
 - **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
 - **Mint(address to, uint256 value):** Allows the contract to mint new tokens and increase the total supply. Tokens are minted and transferred to the specified recipient address.
