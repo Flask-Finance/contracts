@@ -1,4 +1,6 @@
 # StakingContract
+A contract that manages staking and unstaking of tokens, enabling users to participate in asset staking and earn rewards.
+
 - **constructor(address _tokenContractAddress):** Initializes the contract by setting the address of the TokenContract.
 - **stake(uint256 amount):** Allows users to stake a specified amount of tokens. The tokens are transferred from the user to the contract, and the user's balance and the total staked amount are updated. The staking timestamp is recorded.
 - **unstake():** Allows users to unstake their tokens if the lock-up period has ended. The tokens are transferred back to the user, and the user's balance and the total staked amount are adjusted accordingly.
