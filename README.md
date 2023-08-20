@@ -10,10 +10,10 @@
 - In terms of the lock-up period, it is defined as a constant value `lockUpPeriod` of 30 days in the provided code. The **isLockUpPeriodFinished** function compares the difference between the current timestamp and the staking timestamp to determine if the lock-up period has passed for a specific user. This check is used in the unstake function to ensure users can only unstake their tokens after the lock-up period has ended.
 
 # TokenContract
-- The transfer function has been modified to update the balances correctly and call the `stakingContract.updateBalances` function if the stakingContract is set.
-- The approve function now sets the allowance for the spender.
-- The `transferFrom` function has been modified to update the balances correctly, deduct the allowance, and call the stakingContract.updateBalances function if the stakingContract is set.
-- The burn function now reduces the balance and the total supply accordingly, emitting a Transfer event with the burn address as the recipient.
+- **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
+- **transfer()** Has been modified to update the balances correctly and call the `stakingContract.updateBalances` function if the stakingContract is set.
+- **approve()** function now sets the allowance for the spender.
+- **transferFrom()** function has been modified to update the balances correctly, deduct the allowance, and call the stakingContract.updateBalances function if the stakingContract is set.
 
 # XTokContract
 - **constructor():** Initializes the contract by setting the name, symbol, decimals, and totalSupply of the token.
