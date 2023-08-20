@@ -55,5 +55,4 @@ Follow these steps to deploy the contracts in the correct order and set up allow
 ## Step 5: Interact with Contracts
 - Stake and unstake tokens using the `StakingContract`.
 
-**Note:**
-- Ensure you have the required Solidity compiler version and dependencies.
+**Note:** Ensure you have the required Solidity compiler version and dependencies.
